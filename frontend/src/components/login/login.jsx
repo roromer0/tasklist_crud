@@ -10,11 +10,6 @@ function Login() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
-    // Aquí puedes realizar la solicitud HTTP al backend para autenticar al usuario
-    // Utiliza la variable `username` y `password` para enviar los datos del formulario
-
-    // Restablecer los campos del formulario después de enviar la solicitud
     setEmail("");
     setPassword("");
   };
