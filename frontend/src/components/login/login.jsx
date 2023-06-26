@@ -1,42 +1,21 @@
 import React, { useState } from "react";
+import classes from "./login.module.css";
 
 function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
-  const handleUsernameChange = (event) => {
-    setEmail(event.target.value);
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    setEmail("");
-    setPassword("");
-  };
-
   return (
-    <form onSubmit={handleSubmit}>
+    <form>
       <div>
         <label htmlFor="username">Email:</label>
-        <input
-          type="text"
-          id="username"
-          value={email}
-          onChange={handleUsernameChange}
-        />
+        <input type="text" id="username" />
       </div>
       <div>
         <label htmlFor="password">Contraseña:</label>
-        <input
-          type="password"
-          id="password"
-          value={password}
-          onChange={handlePasswordChange}
-        />
+        <input type="password" id="password" />
       </div>
       <button type="submit">Iniciar sesión</button>
+      <h2>¿Aún no tienes cuenta?</h2>
+      <button type="href">Regístrate</button>
     </form>
   );
 }
-
 export default Login;
